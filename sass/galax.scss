@@ -1,0 +1,92 @@
+@use './colors' as c;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	// padding: 0 2rem;
+	background-color: c.$main;
+	// font-family: 'Merriweather', serif;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	font-size: 1.6rem;
+	// overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.bottom-line {
+	width: 100%;
+	border-bottom: 1px solid black;
+}
+
+.wrapper {
+	padding: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
+h2 {
+	font-family: 'Merriweather', serif;
+	font-weight: normal;
+}
+
+.outline-alter {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+// nav
+.header {
+	position: relative;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.6rem 2rem 1.6rem 2rem;
+
+	&__logo {
+		height: 60px;
+	}
+}
+.nav {
+	// position: relative;
+	width: 100%;
+
+	&-mobile {
+		display: none;
+	}
+	&-desktop {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: black;
+		padding: 0 1.6rem;
+	}
+
+	&__shopping-cart {
+		display: block;
+
+		img {
+			object-fit: cover;
+			height: 50px;
+		}
+	}
+}
